@@ -1,26 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {
+  PrimaryButton,
+  mergeStyles,
+  FontSizes,
+  TextField,
+  IButtonProps,
+  Pivot,
+  PivotItem,
+  Label
+} from "office-ui-fabric-react";
+import { ThisComponentIsUsed } from "./TestComponents";
 
-const App: React.FC = () => {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Pivot>
+      <PivotItem headerText = "foo1"/>
+    </Pivot>
+    <ThisComponentIsUsed />
+    </>
   );
 }
-
-export default App;
